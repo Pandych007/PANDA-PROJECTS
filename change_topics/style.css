@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3, color 0.3;
+}
+
+.light_theme {
+  background-color: #fff;
+  color: black;
+}
+
+.dark_theme {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+
+#tema_button {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: blueviolet;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+}
