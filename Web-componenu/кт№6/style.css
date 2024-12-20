@@ -1,0 +1,7 @@
+/* task-list.css */
+
+  
+  .task-list li.done {
+    text-decoration: line-through;
+  }
+  
