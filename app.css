@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  width: 1100px;
+  /* width: 1500px; */
   margin: auto;
 }
 
@@ -20,8 +20,40 @@ body {
   align-items: center;
   justify-content: center;
   margin-left: 0;
+  padding: 0;
 }
 
 .menu ul li {
-  margin: 10px;
+  margin-left: 246px;
+}
+.menu ul li:first-child {
+  margin-left: 0;
+}
+.menu ul li a {
+  text-decoration: none;
+  display: block;
+  background-color: #8217ce;
+  color: white;
+  border-radius: 46px;
+  padding: 5px 50px;
+  border: 1px solid black;
+}
+
+.contentModal,
+.contentModalAbout,
+.contentModalContakt {
+  display: none;
+  background-color: #d6b5e9;
+  padding: 20px;
+  text-align: center;
+  width: 1400px;
+  padding-bottom: 120px;
+  margin: auto;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+
+.contentModalAbout,
+.contentModalContakt {
+  display: none;
 }
