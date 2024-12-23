@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: o;
+  background-color: #b5b0b0;
+}
+
+.geleleya {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.gelaryImg {
+  width: 150px;
+  cursor: pointer;
+  border: 2px solid black;
+  transition: transform 0.3s;
+  box-shadow: 10px 5px 20px black;
+}
+.gelaryImg:hover {
+  transform: scale(1.1);
+}
+
+.boxs {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#boxImg {
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.Hidden {
+  display: none;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
