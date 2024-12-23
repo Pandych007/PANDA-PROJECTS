@@ -1,3 +1,15 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Расстояние между картинкой и текстом */
+}
+
+.site-logo {
+  width: 50px; /* Укажите размер логотипа */
+  height: auto; /* Сохраняет пропорции */
+  border-radius: 5px; /* При желании, добавьте закругления */
+}
+
 body {
   background: linear-gradient(135deg, #000000, #6a0dad);
   background-size: 300% 300%;
