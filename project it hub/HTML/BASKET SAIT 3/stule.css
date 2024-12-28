@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+h1, h2, h3 {
+    color: #ff0000;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Стили для заголовка в шапке сайта */
+header {
+    color: #e80000;
+    text-align: center;
+    padding: 30px 20px; /* Уменьшил отступы для мобильных устройств */
+    font-size: 36px; /* Уменьшил размер шрифта для мобильных устройств */
+    background-image: url("./main/dank2.jpg");
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover; /* Делаем изображение адаптивным */
+    background-position: center; /* Центрируем изображение */
+}
+
+
+/* Стили для навигационного меню */
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: #f2f2f2;
+    padding: 10px 0;
+}
+
+nav li {
+    margin: 0 10px; /* Уменьшил отступы для мобильных устройств */
+    font-size: 18px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ff9100;
+    font-weight: bold;
+}
+
+/* Параграфы с текстом */
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #000000;
+}
+
+/* Стили для секций */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+}
+
+/* Стили для статей */
+article {
+    margin-bottom: 20px;
+}
+
+
+
+/* Стили для изображений */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Стили для фигур и подписей к изображениям и видео */
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    color: #ea0606;
+}
+
+/* Стили для футера */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #9200d6;
+}
+
+/* Дополнительные стили для мобильных устройств */
+@media only screen and (max-width: 768px) {
+    header {
+        font-size: 28px;
+    }
+
+    nav li {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        font-size: 24px;
+    }
+
+    nav {
+        font-size: 14px;
+    }
+
+    main {
+        margin: 10px;
+    }
+
+    section {
+        margin-bottom: 15px;
+    }
+
+    iframe {
+        height: 180px;
+    }
+}
+
+
+/* Дополнительные стили для ноутбука */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    header {
+        font-size: 32px;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 18px;
+    }
+}
+
+/* Дополнительные стили для планшета */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    header {
+        font-size: 24px;
+    }
+
+    nav li {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+}
+
+/* Дополнительные стили для ПК */
+@media only screen and (min-width: 1025px) {
+    header {
+        font-size: 40px;
+    }
+
+    nav li {
+        margin: 0 15px;
+        font-size: 20px;
+    }
+}
+

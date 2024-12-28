@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Сайт про котиков</title>
+
+
+    <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
+
+ 
+    <link rel="stylesheet" href="./css/stule.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+   
+    <header>
+        <div id="left">
+            <a ><img class="logo" src="./img/logo2.png" alt="Котики"></a>
+        </div>
+
+        <div id="right">
+          <button id="fetchCatsBtn"><i class="fa-solid fa-hourglass-start" style="color: #ff7b00;"></i></button> 
+            <button id="showAddCatModal"><i class="fa-solid fa-plus" style="color: #e08300;"></i></i></button>   
+        </div>
+    </header>
+
+   
+    <main>
+        <div id="catsContainer"></div>
+    </main>
+
+    
+    <footer>
+        <p>MR_PANDYCH_2024</p>
+        <a >kotiki/api.com</a>
+        <a >создай своего котика</a>
+    </footer>
+
+    
+    <div id="addCatModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close"><i class="fa-solid fa-xmark"></i></span>
+            <h2>Cоздай своего котика</h2>
+            <form id="addCatForm">
+                <input type="number" id="addId" name="id" placeholder="ID" required>
+                <input type="text" id="name" name="name" placeholder="Придумай имя для своего котика" required>
+                <input type="number" id="age" name="age" placeholder="Укажт возраст своего котика">
+                <input type="url" id="imageUrl" name="image" placeholder="Ссылка на изображение">
+                <input type="text" id="description" name="description" placeholder="Создай описание своему котику">
+                <button type="submit">Создать уникального котика</button>
+            </form>
+        </div>
+    </div>
+
+  
+    <div id="editCatModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close"><i class="fa-solid fa-xmark"></i></span>
+            <h2>Изменить информацию о котике</h2>
+            <form id="editCatForm">
+                <input type="hidden" id="editId" name="id">
+                <input type="text" id="editName" name="name" placeholder="Имя котика" required>
+                <input type="number" id="editAge" name="age" placeholder="Возраст">
+                <input type="url" id="editImageUrl" name="image" placeholder="Ссылка на изображение">
+                <input type="text" id="editDescription" name="description" placeholder="Описание">
+                <button type="submit">Сохранить </button>
+            </form>
+        </div>
+    </div>
+
+  
+    <div id="viewCatModal" class="modal" style="display: none;">
+        <div class="modal-content">
+           <span class="close"><i class="fa-solid fa-xmark"></i></span> 
+            <h2>Информация о твоем персональном котике</h2>
+            <div id="catInfoContainer"></div>
+        </div>
+    </div>
+
+   
+    <script src="./js/code.js"></script>
+</body>
+
+</html>

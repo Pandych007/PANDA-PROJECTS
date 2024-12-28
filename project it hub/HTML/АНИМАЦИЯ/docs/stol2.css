@@ -1,0 +1,299 @@
+body{
+    text-align: center;
+    background-color: rgb(43, 73, 226);
+}
+/* 
+Car
+-------------------------------------------------------------------------------------------------------------------- */
+.CarBody {
+    height: 100px;
+    width: 290px;
+    position: absolute;
+    left: 50px;
+    top: 0px;
+background-color: brown;
+
+animation-name: CarBody;
+animation: reverse;
+    animation-name: CarBody;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 5Ss;
+    animation-timing-function: ease-in-out; 
+
+     -webkit-animation: linear;
+    -webkit-animation-name: CarBody;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards; 
+    
+}
+
+
+.CarBody2{
+    margin-left: 20%;  
+    position: absolute;
+   bottom:0px;    
+ left: 230px;
+border-bottom: 100px solid red;
+border-left: 0px solid transparent;
+border-right: 100px solid transparent;
+height: 0;
+width: 97px;
+}
+
+
+
+
+.FrontWheel { 
+     margin-right: 10%;
+     position: absolute;
+       bottom: -100px;
+       left: 350px;
+    width: 100px; 
+    height: 100px;
+    background: #252121;
+    border-radius: 50%;
+    }
+
+       
+    
+
+
+    .MiddleWheel{
+       margin-left: 12%;
+       position:  absolute;
+       bottom: 0px;
+       top: 100px;
+      right: 0px;
+        width: 100px; 
+        height: 100px;
+        background: #252121;
+        border-radius: 50%;
+        }
+
+        .RearWheel {
+            margin-left: 25%;
+       position:  absolute;
+       top: 100px;
+      right: 150px;
+        width: 100px; 
+        height: 100px;
+        background: #252121;
+        border-radius: 50%;
+          }      
+
+          @keyframes CarBody {
+            from{
+                left: -3%;
+            }
+            to {
+                left: calc(100vw - 550px);
+                
+            }
+            }
+            @-webkit-keyframes CarBody  {
+                from {
+                    left: -50%;
+                }
+            
+                to {
+                    left: calc(100vw - 550px);
+                }
+            }
+            
+            
+/* 
+Road
+-------------------------------------------------------------------------------------------------------------------- */
+.Road{
+position: relative;
+top: 300px;
+background-color: grey;
+width: calc(100vw);
+height: 500px;
+}
+
+
+
+/* 
+Strip
+-------------------------------------------------------------------------------------------------------------------- */
+
+.Strip1{
+    position:  absolute;
+     width: 300px; 
+     height: 50px;
+   left: 1300px;
+    top: 200px;
+    background-color: aliceblue;
+}
+
+.Strip2{
+    position:  absolute;
+    width: 300px; 
+    height: 50px;
+    left: 600px;
+    top: 200px;
+    background-color: aliceblue;
+}
+
+
+
+.Strip3{
+    position:  absolute;
+     width: 300px; 
+     height: 50px;
+   left: 30px;
+    top: 200px;
+    background-color: aliceblue;
+}
+
+
+
+     
+ 
+/* 
+Finish
+-------------------------------------------------------------------------------------------------------------------- */
+
+/* .Finish{
+     top: -380px;
+    position: absolute;
+  left:1650px;
+    width: 100px; 
+    height: 850px;
+    background-color: rgb(28, 172, 28);
+   
+} */
+
+
+/* 
+h1
+-------------------------------------------------------------------------------------------------------------------- */
+.h1{
+    position: absolute;
+
+   bottom: 200px;
+
+}
+
+
+/* 
+SuperCar
+-------------------------------------------------------------------------------------------------------------------- */
+
+.SuperCar{
+
+    position:  relative;
+    top: 300px;
+ height: 100px;
+    width: 450px;
+    background-color: aqua;
+    border-radius: 10%;
+
+
+animation-name:SuperCar ;
+   
+     animation: linear;
+    animation-name: SuperCar;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    -webkit-animation: linear;
+    -webkit-animation-name: SuperCar;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards 
+
+    
+}
+
+
+
+
+
+.SuperCar2{
+    position:  absolute;
+    top: -50px;
+   left: 2px;
+    border-radius: 5%;
+ height: 100px;
+    width: 300px;
+    background-color:aqua;
+    border-radius: 100%;
+}
+
+
+    .Coleso{
+        width: 100px; 
+        height: 100px;
+        background: #252121;
+        border-radius: 50%;
+        position:  absolute;
+    top: 75px;
+    
+    }
+
+
+    .Coleso2{
+        width: 100px; 
+        height: 100px;
+        background: #252121;
+        border-radius: 50%;
+        position:  absolute;
+    top: 75px;
+    left: 330px;
+    }
+@keyframes SuperCar {
+from{
+    left: -10%;
+}
+to {
+    left: calc(100vw - 550px);
+    
+}
+}
+@-webkit-keyframes SuperCar {
+    from {
+        left: -3%;
+    }
+
+    to {
+        left: calc(100vw - 350px);
+    }
+}
+/* 
+Solnce
+-------------------------------------------------------------------------------------------------------------------- */
+
+.Solnce{
+    background-color: rgb(43, 73, 226);
+    border-radius: 50%;
+    position: absolute;
+     top: 50px;
+}
+img.Solnce {
+    animation: 1s linear 0s normal none infinite running Solnce;
+    -webkit-animation: 1s linear 0s normal none infinite running Solnce;
+    width: 100px;
+    height: 100px;
+  }
+  @keyframes Solnce{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes Solnce {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

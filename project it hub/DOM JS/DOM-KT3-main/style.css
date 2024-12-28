@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(20deg, rgb(81, 255, 0) 50%, rgb(255, 188, 6) );
+    min-height: 100vh;
+    color: #a800e6;
+}
+
+ul {
+    font-size: 50px;
+}
+
+.main_mark_book,
+.main_mark_dvd,
+.main_books_types_mark_o,
+.main_books_types_mark_z,
+.main_dvd_types_mark,
+.main_dvd_types_mark_z,
+.main_dvd_types_mark_o {
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+h2,
+h4 {
+    text-align: center;
+    margin: 0;
+    display: flex;
+    cursor: pointer;
+}
+
+.main_books_types,
+.main_dvd_types {
+    text-align: center;
+    color: rgb(255, 15, 15);
+    transform: translateX(26px);
+}
+
+.main_books_genres,
+.main_dvd_genres {
+    font-size: 50px;
+    text-align: left;
+    color: rgb(13, 0, 255);
+    list-style-type: none;
+}

@@ -1,0 +1,165 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+   height:100% ;
+   width:100% ;
+    background: purple;
+}
+
+.container{
+    display: inline-block;
+    padding: 50px;
+    justify-content: space-between;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #FF8240;
+        border-radius: 0px;
+        margin: 2px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #ff9358;
+    }
+    
+    ::-webkit-scrollbar-track {
+        border-radius: 0px;
+        background: #505050;
+    }
+    
+    
+
+
+.card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8,.card9{
+    position: relative;
+background-color:orange;
+color: black;
+width: 25cm;
+height: 15cm;
+border-radius: 30px;
+}
+img{
+    width: 10cm;
+    height: 10cm;
+    border-radius: 90px;
+    position: relative;
+    padding: 43px;
+}
+.image{
+    height: 5cm;
+    width: 5cm;
+    position: absolute;
+    border-radius: 15px;
+    top: 15px;
+    left: 30cm;
+}
+.information{
+    font-size: 40px;
+    font-style: italic;
+    position: relative;
+    float: right;
+    top: 2cm;
+    right: 3cm;
+}
+.description{
+    position: relative;
+    font-size: 35px;
+    bottom: 130px;
+    z-index: 1;
+    padding-left:10px;
+}
+
+.description1,.description2,.description3,.description4,.description5,.description6,.description7,.description8{
+    position: relative;
+    z-index: 1;
+}
+.description1{
+    left: 51cm;
+    bottom: 22cm;
+    font-size: 25px;
+
+}
+.description2{
+    font-size: 25px;
+    bottom: 19cm;
+    left: 4cm;
+}
+.description3{
+    font-size: 24px;
+    left: 51cm;
+    bottom: 37cm;
+}
+.description4{
+    font-size: 24px;
+    bottom: 36cm;
+    left: 3cm;
+}
+.description5{
+    font-size: 24px;
+    left: 52cm;
+    bottom: 54cm;
+}
+.description6{
+    font-size: 24px;
+    bottom: 53cm;
+    left: 4cm;
+}
+.description7{
+    font-size: 25px;
+    left: 50cm;
+    bottom: 70.5cm;
+}
+.description8{
+    font-size: 25px;
+    left: 4cm;
+    bottom: 70cm;
+}
+.card1{
+z-index: 1;
+position:relative;
+float: right;
+
+}
+.card2{ 
+    left: 47cm;
+    bottom: 18.6cm;
+}
+.card3{
+bottom: 16cm;
+left: 50px;
+}
+.card4{
+    left: 48cm;
+    bottom: 33.5cm;
+}
+.card5{
+    bottom: 33cm;
+    left: 50px;
+}
+.card6{
+    left: 47cm;
+    bottom: 50.5cm;
+}
+.card7{
+    bottom: 50cm;
+    left: 50px;
+}
+.card8{
+   left: 47cm;
+   bottom: 67.5cm;
+}
+.card9{
+   bottom: 67cm; 
+   left: 50px;
+}

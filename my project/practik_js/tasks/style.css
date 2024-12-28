@@ -1,0 +1,21 @@
+.OK {
+  color: green;
+}
+
+.NotOK {
+  color: red;
+}
+
+.bottonOk {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+.bottonNotOk {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: none;
+}

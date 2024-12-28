@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card/Bank</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="logo" style="background-image: url();"></div>
+        <div class="card_number"></div>
+        <div class="exp_date">03/23</div>
+        <div class="cardhld"></div>
+        <div class="system"></div>
+    </div>
+    <div class="block">
+        <form action="" id="card_data">
+            <div class="item">
+                <input type="number" name="txt" placeholder="0000 0000 0000 0000" class="number">
+            </div>
+            <div class="item">
+                <input type="text" name="cardholder" placeholder="SURNAME NAME" class="name">
+            </div>
+            <div class="item">
+                <input type="month" class="date" min="2023-03" value="2023-03">
+            </div>
+            <div class="item">
+                <select name="card_type" id="" class="card_type">
+                    <option>Выберите платежную систему</option>
+                    <option>VISA</option>
+                    <option>MASTER CARD</option>
+                    <option>MIR</option>
+                    <option>PayPal</option>
+                    <option>Union Pay</option>
+                </select>
+            </div>
+            <div class="item">
+                <select name="bank" id="" class="bank">
+                    <option>Выберите банк</option>
+                    <option>Альфа банк</option>
+                    <option>Сбербанк</option>
+                    <option>Тинькофф</option>
+                    <option>Совкомбанк</option>
+                    <option>ВТБ</option>
+                </select>
+            </div>
+            <div><input type="submit" class="block btn"></div>
+        </form>
+        
+    </div>
+    <table class="table">
+        <tr>
+            <td>Номер карты</td>
+            <td>Держатель</td>
+            <td>Срок действия</td>
+            <td>Платежная система</td>
+            <td>Банк</td>
+        </tr>
+    </table>
+    <script src="./code.js"></script>
+</body>
+</html>
