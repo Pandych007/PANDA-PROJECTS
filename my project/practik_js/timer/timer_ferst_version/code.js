@@ -1,6 +1,6 @@
 const timerDiv = document.getElementById("timer");
 
-const endDate = new Date("2024-12-31T00:00:00");
+const endDate = new Date("2025-07-20T00:00:00");
 const openModalbtn = document.getElementById("openModal");
 const closeModalbtn = document.getElementById("closeModal");
 const modal = document.getElementById("modal");
@@ -21,7 +21,7 @@ function updateTimer() {
   const now = new Date();
   const diff = endDate - now;
   if (diff <= 0) {
-    timerDiv.textContent = "новый год";
+    timerDiv.textContent = "день рождение";
     clearInterval(t);
     return;
   }
@@ -30,6 +30,6 @@ function updateTimer() {
   const minutes = Math.floor((diff / (1000 * 60)) % 60);
   const seconds = Math.floor((diff / 1000) % 60);
 
-  timerDiv.textContent = `до нового года осталось: ${days} дней, ${hours} часов, ${minutes} минут, ${seconds} секунд`;
+  timerDiv.textContent = `до дня рождения осталось: ${days} дней, ${hours} часов, ${minutes} минут, ${seconds} секунд`;
 }
 const t = setInterval(updateTimer, 1000);

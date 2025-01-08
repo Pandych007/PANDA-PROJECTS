@@ -11,6 +11,34 @@ htmlSections.forEach((section) => {
     }
   });
 });
+
+// const htmlSections = document.querySelectorAll(".html1");
+
+// htmlSections.forEach((section) => {
+//   section.addEventListener("click", () => {
+//     const content = section.nextElementSibling;
+
+//     if (content.style.display === "none" || content.style.display === "") {
+//       content.style.display = "block";
+//     } else {
+//       content.style.display = "none";
+//     }
+//   });
+// });
+
+// document.getElementById("myMrogekt").addEventListener("click", () => {
+//   const contentModal = document.getElementById("contentModal");
+
+//   if (
+//     contentModal.style.display === "none" ||
+//     contentModal.style.display === ""
+//   ) {
+//     contentModal.style.display = "block";
+//   } else {
+//     contentModal.style.display = "none";
+//   }
+// });
+
 // ________________________________________________________________
 
 let myMrogekt = document.getElementById("myMrogekt");
