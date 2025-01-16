@@ -113,13 +113,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-form label {
+.form1 label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
 }
 
-form input[type="number"] {
+.form1 input[type="number"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -128,7 +128,7 @@ form input[type="number"] {
   box-sizing: border-box;
 }
 
-form button {
+.form1 button {
   width: 100%;
   padding: 10px;
   background-color: #007bff;
@@ -139,7 +139,7 @@ form button {
   font-size: 16px;
 }
 
-form button:hover {
+.form1 button:hover {
   background-color: #0056b3;
 }
 .rov2 {
