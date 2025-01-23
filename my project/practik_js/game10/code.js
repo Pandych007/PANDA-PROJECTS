@@ -16,6 +16,8 @@ let diapazon = 20;
 let countPoputki = 20;
 let cluePodskaska = 2;
 
+let totalPoint = 0;
+
 // за все уровни
 
 let nuwRandomNumber;
@@ -144,6 +146,7 @@ levelChange.forEach((elem, index) => {
 let startTimer = false;
 let timer1 = document.querySelector(".timer1");
 timer1.addEventListener("click", function () {
+  document.body.style.backgroundColor = "#fff";
   let timer1V1 = timer1.textContent;
   let totalTime;
   if (carenLavcel == 1) {
@@ -200,31 +203,63 @@ startGameBTN.addEventListener("click", function () {
     alert("Нажмите на таймер что бы начать игру");
   } else {
     let numberInput = document.getElementById("numberInput").value;
+    console.log(nuwRandomNumber);
     if (numberInput == "") {
       alert("Введите число");
     } else {
       if (numberInput == nuwRandomNumber) {
         alert("вы угадали чило");
+        document.querySelector(".numberWin").value = numberInput;
+
         if (carenLavcel == 1) {
+          totalPoint += 5;
           point += 5;
-          countPoputki--;
+          // countPoputki--;
+          countPoputki = 20;
+          document.querySelector(".timer1").textContent = "07:00";
           if (point == 20) {
             carenLavcel = 2;
-            // document.querySelector(".lavel1").textContent ="Средний уровень"
+            point = 0;
+            document.querySelector(".lavel1").textContent = "Средний уровень";
+            document.querySelector(".timer1").textContent = "06:00";
           }
+          clearInterval(interval);
+          startTimer = false;
         } else if (carenLavcel == 2) {
+          totalPoint += 4;
           point += 4;
-          countPoputki--;
+          countPoputki = 15;
+          clearInterval(interval);
+          startTimer = false;
+          if (point == 24) {
+            carenLavcel = 3;
+            point = 0;
+            document.querySelector(".lavel1").textContent = "Сложный  уровень";
+            document.querySelector(".timer1").textContent = "06:00";
+          }
+          document.querySelector(".timer1").textContent = "06:00";
         } else if (carenLavcel == 3) {
+          totalPoint += 3;
           point += 3;
-          countPoputki--;
+          countPoputki = 15;
+          clearInterval(interval);
+          startTimer = false;
+          if (point == 27) {
+            carenLavcel = 4;
+            point = 0;
+            document.querySelector(".lavel1").textContent = "хард-кор  уровень";
+            document.querySelector(".timer1").textContent = "05:00";
+          }
+          document.querySelector(".timer1").textContent = "06:00";
         } else if (carenLavcel == 4) {
+          totalPoint += 1;
           point += 1;
-          countPoputki--;
+          countPoputki = 10;
+          clearInterval(interval);
+          startTimer = false;
+          document.querySelector(".timer1").textContent = "05:00";
         }
-        document.getElementById("point1").textContent = point;
-        document.getElementById("countPoputki").textContent = countPoputki;
-        clearInterval(interval);
+
         // count = 20;
         // nRm = 0;
         // point++;
@@ -236,6 +271,8 @@ startGameBTN.addEventListener("click", function () {
         alert("число меньше");
         countPoputki--;
       }
+      document.getElementById("point1").textContent = point;
+      document.getElementById("countPoputki").textContent = countPoputki;
     }
   }
 });
