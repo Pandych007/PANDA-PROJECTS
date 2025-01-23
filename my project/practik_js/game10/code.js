@@ -203,7 +203,7 @@ startGameBTN.addEventListener("click", function () {
     alert("Нажмите на таймер что бы начать игру");
   } else {
     let numberInput = document.getElementById("numberInput").value;
-    console.log(nuwRandomNumber);
+
     if (numberInput == "") {
       alert("Введите число");
     } else {
