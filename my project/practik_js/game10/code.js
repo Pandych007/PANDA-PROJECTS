@@ -4,7 +4,7 @@
 
 // время сложный уровень 6 мин,  надо набрать 27 , кол во попыток 15, диапазон от 1 до 40, кол во подсказок 5, одно угаданное число дает 3 очка, надо угадать 9 чисел
 
-// время хард кор уровень 5 мин, надо набрать  10, кол во попыток 10, диапазон от 1 до 60, кол во подсказок 7, одно угаданное число дает 1 очко, надо угадать 10 чисел
+// время хард кор уровень 5 мин, надо набрать  10, кол во попыток 10, диапазон от 1 до 60, кол во подсказок 7, одно угаданное число дает 2 очко, надо угадать 5 чисел
 
 // let point = 0;
 //
@@ -14,7 +14,7 @@ let limitPoint = 20;
 let point = 0;
 let diapazon = 20;
 let countPoputki = 20;
-let cluePodskaska = 2;
+let Podskaska = 2;
 
 let totalPoint = 0;
 
@@ -106,7 +106,7 @@ levelChange.forEach((elem, index) => {
         limitPoint = 20;
         diapazon = 20;
         countPoputki = 20;
-        cluePodskaska = 2;
+        Podskaska = 2;
         break;
       case 2:
         timer = timerl2;
@@ -115,7 +115,7 @@ levelChange.forEach((elem, index) => {
         limitPoint = 24;
         diapazon = 40;
         countPoputki = 15;
-        cluePodskaska = 3;
+        Podskaska = 3;
         break;
       case 3:
         timer = timerl3;
@@ -124,7 +124,7 @@ levelChange.forEach((elem, index) => {
         limitPoint = 27;
         diapazon = 20;
         countPoputki = 15;
-        cluePodskaska = 5;
+        Podskaska = 5;
         break;
       case 4:
         timer = timerl4;
@@ -133,7 +133,7 @@ levelChange.forEach((elem, index) => {
         limitPoint = 10;
         diapazon = 60;
         countPoputki = 10;
-        cluePodskaska = 7;
+        Podskaska = 7;
         break;
     }
     document.querySelector(".lavel1").textContent = textLavel;
@@ -199,6 +199,7 @@ timer1.addEventListener("click", function () {
 // _____________________________________________
 let startGameBTN = document.getElementById("startGameBTN");
 startGameBTN.addEventListener("click", function () {
+  // console.log(nuwRandomNumber);
   if (startTimer == false) {
     alert("Нажмите на таймер что бы начать игру");
   } else {
@@ -208,6 +209,7 @@ startGameBTN.addEventListener("click", function () {
       alert("Введите число");
     } else {
       if (numberInput == nuwRandomNumber) {
+
         alert("вы угадали чило");
         document.querySelector(".numberWin").value = numberInput;
 
@@ -222,6 +224,13 @@ startGameBTN.addEventListener("click", function () {
             point = 0;
             document.querySelector(".lavel1").textContent = "Средний уровень";
             document.querySelector(".timer1").textContent = "06:00";
+            document.querySelector(".numberLavel").textContent = "надо набрать 24 очков что бы перейти на на следующий уровень";
+            document.querySelector(".diapazone").textContent = "диапазон от 1 до 30";
+            document.getElementById("countPoputki").textContent =  countPoputki;
+            document.querySelector(".numberWin") = ""
+           Podskaska = 3;
+           document.querySelector(".podskazka").textContent = `количество подсказок ${Podskaska}`;
+            
           }
           clearInterval(interval);
           startTimer = false;
@@ -236,6 +245,10 @@ startGameBTN.addEventListener("click", function () {
             point = 0;
             document.querySelector(".lavel1").textContent = "Сложный  уровень";
             document.querySelector(".timer1").textContent = "06:00";
+            document.querySelector(".numberLavel").textContent = "надо набрать 27 очков что бы перейти на на следующий уровень";
+            document.querySelector(".diapazone").textContent = "диапазон от 1 до 40";
+            Podskaska = 5;
+           document.querySelector(".podskazka").textContent = `количество подсказок ${Podskaska}`;
           }
           document.querySelector(".timer1").textContent = "06:00";
         } else if (carenLavcel == 3) {
@@ -249,6 +262,10 @@ startGameBTN.addEventListener("click", function () {
             point = 0;
             document.querySelector(".lavel1").textContent = "хард-кор  уровень";
             document.querySelector(".timer1").textContent = "05:00";
+            document.querySelector(".numberLavel").textContent = "надо набрать 10 очков что бы перейти на на следующий уровень";
+            document.querySelector(".diapazone").textContent = "диапазон от 1 до 60";
+            Podskaska = 7;
+           document.querySelector(".podskazka").textContent = `количество подсказок ${Podskaska}`;
           }
           document.querySelector(".timer1").textContent = "06:00";
         } else if (carenLavcel == 4) {
@@ -258,8 +275,9 @@ startGameBTN.addEventListener("click", function () {
           clearInterval(interval);
           startTimer = false;
           document.querySelector(".timer1").textContent = "05:00";
+ 
         }
-
+        document.querySelector(".totalPoint").textContent =`общее количество очков  ${totalPoint}`  ;
         // count = 20;
         // nRm = 0;
         // point++;
@@ -281,4 +299,31 @@ let exsitGame = document.getElementById("exsitGame");
 exsitGame.addEventListener("click", function () {
   window.location.replace("index.html");
 });
-// _________________________________________________________________
+// ________________________________________________________________
+
+let podskazkaButton = document.querySelector(".podskazkaButton");
+podskazkaButton.addEventListener("click", function(){
+  if (startTimer != false){ 
+    if(Podskaska == 0){
+      alert("лимит подсказок закончился ")
+    }
+    else{
+       let podskazkaDiapazonMin =  nuwRandomNumber - 5;
+      let podskazkaDiapazonMax = nuwRandomNumber + 5; 
+      alert(  `ваша подсказка от  ${podskazkaDiapazonMin} до ${podskazkaDiapazonMax} ` );
+      Podskaska --;
+      document.querySelector(".podskazka").textContent = `количество подсказок ${Podskaska}`;
+
+    }
+     
+      
+  }
+  else{
+    alert("запустите таймер")
+
+  }
+    
+  
+
+});
+

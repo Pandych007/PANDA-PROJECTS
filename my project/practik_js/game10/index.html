@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>угадай число</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/logo2.jpg" type="image/x-icon" />
   </head>
   <body>
     <div class="pageStart">
@@ -24,19 +25,9 @@
 
     <div class="container2" style="display: none">
       <div class="rov0">
-        <p>надо набрать 20 очков что бы перейти на на следующий уровень</p>
-        <!-- <p>
-          время легкий уровень 7 мин, надо набрать очков 20, кол во попыток 20,
-          диапазон от 1 до 20, кол во подсказок 2, одно угаданное число дает 5
-          очков, надо угадать 5 чисел время средний уровень 6 мин, надо набрать
-          24, кол во попыток 15, диапазон от 1 до 30, кол во подсказок 3, одно
-          угаданное число дает 4 очка, надо угадать 6 чисел время сложный
-          уровень 6 мин, надо набрать 27 , кол во попыток 15, диапазон от 1 до
-          40, кол во подсказок 5, одно угаданное число дает 3 очка, надо угадать
-          9 чисел время хард кор уровень 5 мин, надо набрать 10, кол во попыток
-          10, диапазон от 1 до 60, кол во подсказок 7, одно угаданное число дает
-          1 очко, надо угадать 10 чисел
-        </p> -->
+        <p class="numberLavel">
+          надо набрать 20 очков что бы перейти на на следующий уровень
+        </p>
       </div>
       <div class="rov1">
         <div class="col1">
@@ -45,6 +36,7 @@
         </div>
         <div class="col2"></div>
         <div class="col3">
+          <div class="totalPoint"><p>общее количество очков</p></div>
           <div class="point">
             <p>количество очков <span id="point1">20</span></p>
           </div>
@@ -53,7 +45,7 @@
           </div>
           <div class="diapazone">диапазон от 1 до 20</div>
           <div class="podskazka">количество подсказок 2</div>
-          <div class="podskazkaButton">подсказка</div>
+          <button class="podskazkaButton">подсказка</button>
         </div>
       </div>
 
