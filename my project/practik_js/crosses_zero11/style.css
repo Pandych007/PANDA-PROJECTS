@@ -1,0 +1,43 @@
+body {
+  height: 100vh;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field {
+  margin-top: 100px;
+}
+.col {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viner {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 100px;
+  font-size: 40px;
+}
+
+.mode {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+select {
+  font-size: 30px;
+}

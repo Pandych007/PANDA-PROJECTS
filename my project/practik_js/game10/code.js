@@ -7,10 +7,9 @@
 // время хард кор уровень 5 мин, надо набрать  10, кол во попыток 10, диапазон от 1 до 60, кол во подсказок 7, одно угаданное число дает 2 очко, надо угадать 5 чисел
 
 // !!!!!!!!!!!!!!!!
-// ИСПРАВИТЬ ОШИБКИ
-// 1) КОГДА УГАДАЛ ЧИЛСО НА 1 УРОВНЕ И ПРИ МЕРЕХОДЕ НА ВТОРОЙ ОЧКИ ДОБАВЛЯЮТСЯ.
-// КОГДА Я ПРОШЕЛ ПЕРВЫЙ УРОВЕКНЬ ДОЛЖНО ВЫСКОЧИТ МОДАЛЬНОЕ ОКНО С ПОЗДРОВЛЕНИЕМ И ТАК С ОСТАЛЬНЫМИ
-// 2) ЧИСЛО ПОДСКАЗОК НЕ УВЕЛИЧИВАЕТСЯ НА ДРУГИХ УРОЫНЯХ- ИСПРАВИТЬ
+// добавить
+// если потратить все попытки то игра закончилась
+// при завершении одного уровня должно появлятся новое окно где надпись " поздравлюя вы прошли уровень" и ниже кнопка перейти на следующий уровень
 
 // let point = 0;
 //
@@ -32,7 +31,7 @@ let nuwRandomNumber;
 // let diapazonL3 = 40;
 // let diapazonL4 = 60;
 // timer
-let timerl1 = 7;
+let timerl1 = 1;
 let timerl1s = "00";
 let timerl2 = 6;
 let timerl2s = "00";
@@ -62,7 +61,7 @@ levelChange.forEach((elem, index) => {
   elem.addEventListener("click", function () {
     let lavelText = elem.textContent;
     if (lavelText == "Легкий уровень") {
-      carenLavcel = 1;
+      carenLavcel = 7;
     } else if (lavelText == "Средний уровень") {
       if (point >= 20) carenLavcel = 2;
       else alert("Сначала пройди легкий  уровень");
@@ -178,6 +177,7 @@ timer1.addEventListener("click", function () {
     if (totalTime < 0) {
       clearInterval(interval);
       alert("Время вышло");
+      document.body.style.backgroundColor = "red";
     }
   }, 1000);
 });
@@ -205,7 +205,7 @@ startGameBTN.addEventListener("click", function () {
           countPoputki = 20;
           document.querySelector(".timer1").textContent = "07:00";
           if (point == 20) {
-            // alert("Поздравляю! Ты прошел первый уровень")
+            // alert("Поздравляю! Ты прошел первый уровень");
             carenLavcel = 2;
             point = 0;
             document.querySelector(".lavel1").textContent = "Средний уровень";
@@ -229,6 +229,9 @@ startGameBTN.addEventListener("click", function () {
           countPoputki = 15;
           clearInterval(interval);
           startTimer = false;
+          if (countPoputki == 0) {
+            // alert("кол");
+          }
           if (point == 24) {
             carenLavcel = 3;
             point = 0;
@@ -272,6 +275,7 @@ startGameBTN.addEventListener("click", function () {
           clearInterval(interval);
           startTimer = false;
           document.querySelector(".timer1").textContent = "05:00";
+
           if (point == 10) {
             document.querySelector(".WinInfo").style.display = "flex";
             document.getElementById("OllWinPoint").textContent = totalPoint;
@@ -284,6 +288,7 @@ startGameBTN.addEventListener("click", function () {
         // count = 20;
         // nRm = 0;
         // point++;
+
         document.body.style.backgroundColor = "green";
       } else if (nuwRandomNumber > numberInput) {
         alert("число  больше");
