@@ -1,3 +1,5 @@
+// сломалась игра в угадай число
+
 let matriks = [
   ["", "", ""],
   ["", "", ""],
@@ -38,10 +40,27 @@ function Oneclick(row, col) {
     }
   } else {
     if (Gamer == "X") {
+      let mode = false;
       if (matriks[row][col] == "") {
         matriks[row][col] = "X";
 
-        //1
+        for (let i = 0; i < 3; i++) {
+          let countX = 0;
+          for (let j = 0; j < 3; j++) {
+            if (matriks[i][j] == "O") {
+              countX += 1;
+              if (countX == 2) {
+                matriks[i][j] = "O";
+                mode = true;
+                break;
+              }
+            }
+          }
+          if (countX == 2) {
+            break;
+          }
+        }
+        //1 по строкам
         for (let i = 0; i < 3; i++) {
           let countX = 0;
           for (let j = 0; j < 3; j++) {
@@ -53,37 +72,98 @@ function Oneclick(row, col) {
             for (let j = 0; j < 3; j++) {
               if (matriks[i][j] != "X") {
                 matriks[i][j] = "O";
+                mode = true;
               }
             }
           }
         }
 
-        //2
+        //2 по столбцам
+
+        for (let j = 0; j < 3; j++) {
+          let countY = 0;
+          let mtiRov = -1;
+          for (let i = 0; i < 3; i++) {
+            if (matriks[i][j] == "X") {
+              countY += 1;
+            } else {
+              mtiRov = i;
+            }
+          }
+          if (countY == 2 && mtiRov !== -1) {
+            matriks[mtiRov][j] = "O";
+            mode = true;
+          }
+        }
+
+        //3 по диагонали
+        if (matriks[0][0] == "O" && matriks[1][1] == "O") {
+          matriks[2][2] = "O";
+          mode = true;
+        }
+
+        if (matriks[1][1] == "O" && matriks[2][2] == "O") {
+          matriks[0][0] = "O";
+          mode = true;
+        }
+
+        if (matriks[0][2] == "O" && matriks[1][1] == "O") {
+          matriks[2][0] = "O";
+          mode = true;
+        }
+
+        if (matriks[2][0] == "O" && matriks[1][1] == "O") {
+          matriks[0][2] = "O";
+          mode = true;
+        }
+
+        // рандомная стратегия
+        if (mode === false) {
+          let f = false;
+          while (f === false) {
+            let row = Math.floor(Math.random() * 3);
+            let coll = Math.floor(Math.random() * 3);
+            if (matriks[row][coll] === "") {
+              matriks[row][coll] = "O";
+              f = true;
+            }
+          }
+          /*for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+              // console.log();
+              if (matriks[i][j] !== "" || matriks[i][j] !== "X") {
+                matriks[i][j] = "O";
+                break;
+
+              }
+            }
+          }*/
+        }
       }
     }
     printMatriks(matriks);
   }
 
-  // console.log(matriks);
-  // if (WinerGamer() != false) {
-  //   if (WinerGamer() == "O") {
-  //     document.getElementById("viner").innerHTML = "<b> победил O </b>";
-  //   } else if (WinerGamer() == "X") {
-  //     document.getElementById("viner").innerHTML = "<b> победил X </b>";
-  //   }
-  //   return;
-  // }
-  // if (Gamer == "X") {
-  //   if (matriks[row][col] == "") {
-  //     matriks[row][col] = "X";
-  //     Gamer = "O";
-  //   }
-  // } else {
-  //   if (matriks[row][col] == "") {
-  //     matriks[row][col] = "O";
-  //     Gamer = "X";
-  //   }
-  // }
+  console.log(matriks);
+  if (WinerGamer() != false) {
+    if (WinerGamer() == "O") {
+      document.getElementById("viner").innerHTML = "<b> победил O </b>";
+    } else if (WinerGamer() == "X") {
+      document.getElementById("viner").innerHTML = "<b> победил X </b>";
+    }
+    return;
+  }
+  if (Gamer == "X") {
+    if (matriks[row][col] == "") {
+      matriks[row][col] = "X";
+      Gamer = "O";
+    }
+  } else {
+    if (matriks[row][col] == "") {
+      matriks[row][col] = "O";
+      Gamer = "X";
+    }
+  }
 }
 
 function printMatriks(matriks) {
